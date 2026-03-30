@@ -53,7 +53,9 @@ The cluster-guided method significantly improves fairness testing effectiveness:
 
 - **ADULT:** +55.3% improvement over random search  
 - **COMPAS:** +270.0% improvement over random search  
-
+- **Cluster-guided IDI ratio:** 0.3362
+- **Random search IDI ratio:** 0.2164
+  
 The results demonstrate that discriminatory behaviour is concentrated in specific regions of the input space, which can be efficiently explored using clustering.
 
 ---
@@ -95,10 +97,17 @@ python experiments.py
 Results will be saved in the `results/` directory.
 
 ---
+## Environment
+- **Python version:** 3.10 recommended
+- **Libraries:** See requirements.txt
+Runtime
+- **ADULT:** ~8–10 seconds per run
+- **COMPAS:** ~6–8 seconds per run
 
+The cluster-guided method introduces ~15–18% overhead compared to random search due to clustering, but achieves substantially higher discrimination detection.
 ## Reproducibility
 
-All experiments in the report can be reproduced using the provided scripts, datasets, and trained models. Detailed instructions are included in `replication.pdf`.
+All experiments in the report can be reproduced using the provided scripts, datasets, and trained models. Detailed instructions are included in  `manual.pdf` and `replication.pdf`.
 
 ---
 
