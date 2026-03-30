@@ -1,101 +1,111 @@
-# Cluster-guided-fairness-testing
-Cluster-Guided Fairness Testing for AI Models 
-# Cluster-Guided Fairness Testing for AI Models
+# Cluster-Guided Fairness Testing for AI Classification Models
 
-This project presents a cluster-guided approach for detecting individual discrimination in machine learning models. The method improves over traditional random testing by focusing on regions of the input space where bias is more likely to occur.
+This project presents a cluster-guided approach for detecting individual discrimination in machine learning classifiers. The method improves over traditional random testing by focusing on regions of the input space where discriminatory behaviour is more likely to occur.
 
-## Overview
-
-The system evaluates fairness using Individual Discriminatory Instances (IDIs), where two inputs differ only in sensitive attributes but produce significantly different predictions.
-
-Three methods are implemented:
-- Random Search (baseline)
-- Cluster-Guided Search
-- Adaptive Cluster-Guided Search
-
-## Datasets
-
-- ADULT (UCI Census dataset)
-- COMPAS (recidivism prediction dataset)
-
-## Method
-
-The approach consists of:
-1. Clustering input space using K-Means++
-2. Pilot phase to estimate discrimination density
-3. Budget allocation based on cluster scores
-4. Local exploitation to refine search
-
-## Results
-
-- ADULT: +55.3% improvement over random search
-- COMPAS: +270.0% improvement over random search
-
-## Project Structure
-# Cluster-Guided Fairness Testing for AI Models
-
-This project presents a cluster-guided approach for detecting individual discrimination in machine learning models. The method improves over traditional random testing by focusing on regions of the input space where bias is more likely to occur.
+---
 
 ## Overview
 
-The system evaluates fairness using Individual Discriminatory Instances (IDIs), where two inputs differ only in sensitive attributes but produce significantly different predictions.
+Fairness testing evaluates whether machine learning models treat individuals consistently across sensitive attributes such as age, race, and gender.
 
-Three methods are implemented:
-- Random Search (baseline)
-- Cluster-Guided Search
-- Adaptive Cluster-Guided Search
+This project uses the concept of **Individual Discriminatory Instances (IDIs)**, where two inputs differ only in sensitive attributes but produce significantly different predictions.
 
-## Datasets
+Three testing strategies are implemented:
+- **Random Search** (baseline)
+- **Cluster-Guided Search** (proposed method)
+- **Adaptive Cluster-Guided Search** (extension)
 
-- ADULT (UCI Census dataset)
-- COMPAS (recidivism prediction dataset)
+---
 
 ## Method
 
-The approach consists of:
-1. Clustering input space using K-Means++
-2. Pilot phase to estimate discrimination density
-3. Budget allocation based on cluster scores
-4. Local exploitation to refine search
+The proposed approach improves testing efficiency through structured exploration:
+
+1. **Clustering**  
+   K-Means++ is applied on non-sensitive features to group similar inputs.
+
+2. **Pilot Phase**  
+   A subset of the testing budget is used to estimate discrimination density in each cluster.
+
+3. **Budget Allocation**  
+   Remaining resources are allocated proportionally to clusters with higher discrimination scores.
+
+4. **Local Exploitation**  
+   Test generation is refined within high-risk clusters to improve detection.
+
+---
+
+## Datasets
+
+The experiments are conducted on two benchmark datasets:
+
+- **ADULT Dataset**  
+  UCI Census dataset for income classification
+
+- **COMPAS Dataset**  
+  Recidivism prediction dataset widely used in fairness research
+
+---
 
 ## Results
 
-- ADULT: +55.3% improvement over random search
-- COMPAS: +270.0% improvement over random search
+The cluster-guided method significantly improves fairness testing effectiveness:
+
+- **ADULT:** +55.3% improvement over random search  
+- **COMPAS:** +270.0% improvement over random search  
+
+The results demonstrate that discriminatory behaviour is concentrated in specific regions of the input space, which can be efficiently explored using clustering.
+
+---
 
 ## Project Structure
-├── fairness_tool.py
-├── train_model.py
-├── experiments.py
-├── dataset/
-├── DNN/
-├── results/
-├── manual.pdf
-├── replication.pdf
-├── requirements.pdf
-## How to Run
+├── fairness_tool.py # Core fairness testing logic
+├── train_model.py # Model training script
+├── experiments.py # Experimental evaluation
+├── dataset/ # Preprocessed datasets
+├── DNN/ # Trained models and scalers
+├── results/ # Output results (CSV, figures)
+├── manual.pdf # User manual
+├── replication.pdf # Reproducibility instructions
+├── requirements.txt # Dependencies
 
-1. Install dependencies:
+
+---
+
+## Installation
+
+Install required dependencies:
+
 
 pip install -r requirements.txt
 
 
-2. Train models:
+---
+
+## Usage
+
+### 1. Train Models
 
 python train_model.py
 
 
-3. Run experiments:
+### 2. Run Experiments
 
 python experiments.py
 
 
+Results will be saved in the `results/` directory.
+
+---
+
 ## Reproducibility
 
-All experiments can be reproduced using the provided scripts and datasets. Results will be saved in the `results/` folder.
+All experiments in the report can be reproduced using the provided scripts, datasets, and trained models. Detailed instructions are included in `replication.pdf`.
+
+---
 
 ## Author
 
-Indhu Shree Prakash  
+**Indhu Shree Prakash**  
 MSc Computer Science  
 University of Birmingham
