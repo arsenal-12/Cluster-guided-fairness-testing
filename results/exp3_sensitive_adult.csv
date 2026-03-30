@@ -1,0 +1,21 @@
+dataset,sensitive,run,random_idi,cluster_idi,improvement_pct
+ADULT,age only,1,0.1316,0.1428,8.5
+ADULT,age only,2,0.1332,0.1472,8.5
+ADULT,age only,3,0.128,0.1304,8.5
+ADULT,age only,4,0.1334,0.16,8.5
+ADULT,age only,5,0.1402,0.1428,8.5
+ADULT,race only,1,0.0056,0.0184,148.1
+ADULT,race only,2,0.0068,0.0084,148.1
+ADULT,race only,3,0.0066,0.0178,148.1
+ADULT,race only,4,0.006,0.0146,148.1
+ADULT,race only,5,0.0066,0.0192,148.1
+ADULT,gender only,1,0.1398,0.187,40.4
+ADULT,gender only,2,0.1276,0.1968,40.4
+ADULT,gender only,3,0.1308,0.1854,40.4
+ADULT,gender only,4,0.136,0.185,40.4
+ADULT,gender only,5,0.1322,0.1812,40.4
+ADULT,all three,1,0.2426,0.3196,35.7
+ADULT,all three,2,0.2282,0.3242,35.7
+ADULT,all three,3,0.2382,0.3226,35.7
+ADULT,all three,4,0.2366,0.3136,35.7
+ADULT,all three,5,0.2274,0.3114,35.7

@@ -1,0 +1,11 @@
+run,method,idi_ratio
+1,Random Search,0.2178
+1,Cluster-Guided,0.4396
+2,Random Search,0.2284
+2,Cluster-Guided,0.4574
+3,Random Search,0.2254
+3,Cluster-Guided,0.4392
+4,Random Search,0.227
+4,Cluster-Guided,0.4278
+5,Random Search,0.2332
+5,Cluster-Guided,0.4352
