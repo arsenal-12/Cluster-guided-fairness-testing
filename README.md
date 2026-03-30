@@ -105,5 +105,5 @@ All experiments in the report can be reproduced using the provided scripts, data
 ## Author
 
 **Indhu Shree Prakash**  
-MSc AdvancedComputer Science  
+MSc Advanced Computer Science  
 University of Birmingham
