@@ -59,17 +59,16 @@ The results demonstrate that discriminatory behaviour is concentrated in specifi
 ---
 
 ## Project Structure
-├── fairness_tool.py # Core fairness testing logic
-├── train_model.py # Model training script
-├── experiments.py # Experimental evaluation
-├── dataset/ # Preprocessed datasets
-├── DNN/ # Trained models and scalers
-├── results/ # Output results (CSV, figures)
-├── manual.pdf # User manual
-├── replication.pdf # Reproducibility instructions
-├── requirements.txt # Dependencies
 
-
+    ├── fairness_tool.py        # Core fairness testing logic
+    ├── train_model.py          # Model training script
+    ├── experiments.py          # Experimental evaluation
+    ├── dataset/                # Preprocessed datasets
+    ├── DNN/                    # Trained models and scalers
+    ├── results/                # Output results (CSV, figures)
+    ├── manual.pdf              # User manual
+    ├── replication.pdf         # Reproducibility instructions
+    ├── requirements.txt        # Dependencies
 ---
 
 ## Installation
