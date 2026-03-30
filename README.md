@@ -70,29 +70,29 @@ The results demonstrate that discriminatory behaviour is concentrated in specifi
 ├── requirements.txt # Dependencies
 
 
+
 ---
 
 ## Installation
 
 Install required dependencies:
 
-
+```bash
 pip install -r requirements.txt
-
 
 ---
 
 ## Usage
 
 ### 1. Train Models
-
+```bash
 python train_model.py
-
+```
 
 ### 2. Run Experiments
-
+```bash
 python experiments.py
-
+```
 
 Results will be saved in the `results/` directory.
 
@@ -107,5 +107,5 @@ All experiments in the report can be reproduced using the provided scripts, data
 ## Author
 
 **Indhu Shree Prakash**  
-MSc Computer Science  
+MSc AdvancedComputer Science  
 University of Birmingham
